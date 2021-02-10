@@ -15,6 +15,9 @@ ext {
     //Picasso
     picassoVersion = "2.8"
 
+    //Intuit
+    intuitVersion = "1.0.6"
+
     dependencies = [
             koin : "org.koin:koin-android:$koinVersion",
             koinViewModel : "org.koin:koin-android-viewmodel:$koinVersion",
@@ -24,6 +27,9 @@ ext {
             retrofit: "com.squareup.retrofit2:retrofit:$retrofitVersion",
             converterGson: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
             picasso : "com.squareup.picasso:picasso:$picassoVersion",
-            viewModelLifeCycle: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+            viewModelLifeCycle: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion",
+            intuitSsp: "com.intuit.ssp:ssp-android:$intuitVersion",
+            intuitSdp: "com.intuit.sdp:sdp-android:$intuitVersion",
+
     ]
 }
