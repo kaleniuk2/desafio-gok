@@ -4,5 +4,5 @@ import com.kaleniuk2.domain.entities.Products
 
 sealed class MainActivityState {
     class Success(val products: Products): MainActivityState()
-    object Error: MainActivityState()
+    class Error(val error: String): MainActivityState()
 }
