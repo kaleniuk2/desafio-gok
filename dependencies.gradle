@@ -1,0 +1,27 @@
+ext {
+
+    //Koin
+    koinVersion = '1.0.2'
+
+    //Coroutines
+    coroutinesVersion = '1.4.2'
+
+    //LifeCycle
+    lifecycleVersion = "2.2.0"
+
+    //Retrofit
+    retrofitVersion = "2.9.0"
+
+    //Picasso
+    picassoVersion = "2.8"
+
+    dependencies = [
+            koin : "org.koin:koin-android:$koinVersion",
+            coroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion",
+            viewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion",
+            liveData:  "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion",
+            retrofit: "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            converterGson: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            picasso : "com.squareup.picasso:picasso:$picassoVersion"
+    ]
+}
