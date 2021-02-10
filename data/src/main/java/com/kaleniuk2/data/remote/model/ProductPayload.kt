@@ -1,9 +1,9 @@
-package com.kaleniuk2.data.remote
+package com.kaleniuk2.data.remote.model
 
 data class ProductsPayload(
     var spotlight: List<ProductPayload> = listOf(),
     var products: List<ProductPayload> = listOf(),
-    var cash: List<ProductPayload> = listOf()
+    var cash: ProductPayload
 )
 
 data class ProductPayload(

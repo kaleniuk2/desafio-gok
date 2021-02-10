@@ -1,7 +1,7 @@
 package com.kaleniuk2.data.remote.mapper
 
-import com.kaleniuk2.data.remote.ProductPayload
-import com.kaleniuk2.data.remote.ProductsPayload
+import com.kaleniuk2.data.remote.model.ProductPayload
+import com.kaleniuk2.data.remote.model.ProductsPayload
 import com.kaleniuk2.domain.entities.Product
 import com.kaleniuk2.domain.entities.Products
 
@@ -10,7 +10,7 @@ object ProductsMapper {
         Products(
             spotlight = productsPayload.spotlight.map { payloadToProduct(it) },
             products = productsPayload.products.map { payloadToProduct(it) },
-            cash = productsPayload.cash.map { payloadToProduct(it) }
+            cash = payloadToProduct(productsPayload.cash)
         )
 
 

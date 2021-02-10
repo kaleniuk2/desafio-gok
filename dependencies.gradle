@@ -17,11 +17,13 @@ ext {
 
     dependencies = [
             koin : "org.koin:koin-android:$koinVersion",
+            koinViewModel : "org.koin:koin-android-viewmodel:$koinVersion",
             coroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion",
             viewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion",
             liveData:  "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion",
             retrofit: "com.squareup.retrofit2:retrofit:$retrofitVersion",
             converterGson: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
-            picasso : "com.squareup.picasso:picasso:$picassoVersion"
+            picasso : "com.squareup.picasso:picasso:$picassoVersion",
+            viewModelLifeCycle: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     ]
 }
