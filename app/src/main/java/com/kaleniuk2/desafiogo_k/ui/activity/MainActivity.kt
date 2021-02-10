@@ -1,7 +1,9 @@
 package com.kaleniuk2.desafiogo_k.ui.activity
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -52,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                     setupProducts(mainState.products.products)
                 }
                 is MainActivityState.Error -> {
-                    showToast(mainState.error)
+                    createTryAgainDialog(mainState.error)
                 }
                 is MainActivityState.ShowLoading -> {
                     showLoading(mainState.show)
@@ -86,5 +88,22 @@ class MainActivity : AppCompatActivity() {
             offscreenPageLimit = 3
             setPageTransformer(MarginPageTransformer(resources.getDimension(R.dimen._10sdp).toInt()))
         }
+    }
+
+    private fun createTryAgainDialog(errorMessage: String) {
+        AlertDialog
+            .Builder(this)
+            .setTitle(R.string.loading_error)
+            .setMessage(errorMessage)
+            .setPositiveButton(R.string.try_again
+            ) { dialog, _ ->
+                productsViewModel.getProducts()
+                dialog.dismiss()
+            }
+            .setNegativeButton(R.string.exit_app) { _, _ ->
+                finish()
+            }
+            .create()
+            .show()
     }
 }

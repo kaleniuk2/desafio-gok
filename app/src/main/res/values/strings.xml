@@ -3,4 +3,7 @@
     <string name="hello_gok">Olá, GO-K</string>
     <string name="digio_cash">digio <font color="#808080">Cash</font></string>
     <string name="products">Produtos</string>
+    <string name="loading_error">Erro ao carregar informações</string>
+    <string name="try_again">Tentar Novamente</string>
+    <string name="exit_app">Sair do App</string>
 </resources>
