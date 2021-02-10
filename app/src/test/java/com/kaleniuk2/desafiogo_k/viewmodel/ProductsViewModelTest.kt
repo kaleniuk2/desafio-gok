@@ -23,8 +23,6 @@ import java.lang.Exception
 class ProductsViewModelTest {
     @get:Rule
     val instantExecutorRule = InstantTaskExecutorRule()
-
-
     var stateObserver: Observer<MainActivityState> = mockk(relaxed = true)
 
     private val testDispatcher  = TestCoroutineDispatcher()
