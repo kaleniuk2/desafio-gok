@@ -12,8 +12,5 @@ dependencies {
     def dependencies = rootProject.ext.dependencies
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-
     implementation dependencies.koin
-    implementation dependencies.retrofit
-    implementation dependencies.converterGson
 }
