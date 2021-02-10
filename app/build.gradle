@@ -49,6 +49,7 @@ dependencies {
     implementation dependencies.viewModelLifeCycle
     implementation dependencies.intuitSsp
     implementation dependencies.intuitSdp
+    implementation dependencies.picasso
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'

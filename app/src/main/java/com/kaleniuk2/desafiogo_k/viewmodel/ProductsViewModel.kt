@@ -19,6 +19,7 @@ class ProductsViewModel(
     val mainState: LiveData<MainActivityState> = _mainState
 
     fun getProducts() {
+        _mainState.value = MainActivityState.ShowLoading(true)
         viewModelScope.launch {
             when (val result = productsUseCase.execute()) {
                 is ResultWrapper.Success -> {
@@ -28,6 +29,7 @@ class ProductsViewModel(
                     _mainState.value = MainActivityState.Error(result.error?.message.toString())
                 }
             }
+            _mainState.value = MainActivityState.ShowLoading(false)
         }
     }
 }
