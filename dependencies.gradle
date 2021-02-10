@@ -18,6 +18,13 @@ ext {
     //Intuit
     intuitVersion = "1.0.6"
 
+    //Mockk
+    mockkVersion = "1.10.5"
+
+    //Test
+    coreTestingVersion = "2.1.0"
+    coroutinesTest = "1.4.2"
+
     dependencies = [
             koin : "org.koin:koin-android:$koinVersion",
             koinViewModel : "org.koin:koin-android-viewmodel:$koinVersion",
@@ -30,6 +37,8 @@ ext {
             viewModelLifeCycle: "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion",
             intuitSsp: "com.intuit.ssp:ssp-android:$intuitVersion",
             intuitSdp: "com.intuit.sdp:sdp-android:$intuitVersion",
-
+            mockk : "io.mockk:mockk:$mockkVersion",
+            coreTesting:  "androidx.arch.core:core-testing:$coreTestingVersion",
+            coroutinesTest:  "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTest"
     ]
 }

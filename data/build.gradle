@@ -35,6 +35,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    sourceSets {
+        test.resources.srcDirs += 'src/test/assets'
+    }
 }
 
 dependencies {
@@ -52,6 +56,7 @@ dependencies {
     implementation dependencies.coroutines
 
     testImplementation 'junit:junit:4.+'
+    testImplementation dependencies.mockk
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }

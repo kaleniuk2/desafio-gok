@@ -57,7 +57,11 @@ class MainActivity : AppCompatActivity() {
                     createTryAgainDialog(mainState.error)
                 }
                 is MainActivityState.ShowLoading -> {
-                    showLoading(mainState.show)
+                    showLoading(true)
+                }
+
+                is MainActivityState.HideLoading -> {
+                    showLoading(false)
                 }
             }
         }
